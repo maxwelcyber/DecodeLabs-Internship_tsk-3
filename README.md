@@ -104,7 +104,7 @@ mysql -h 127.0.0.1 -u admin -p
 ### 📋 Step 4: Write SQL to Create the Table
 Now the fun part – which was actually building the database structure.
 
-```text
+```sql
 CREATE DATABASE decodelabs;
 USE decodelabs;
 
@@ -123,3 +123,25 @@ CREATE TABLE Interns (
 
 #### Why this matters: In Excel, you can type anything (or nothing). In a database, these rules enforce data quality at the system level. The database won't accept bad data.
 
+
+### 📋 Step 5: Insert Dummy Records & verify data persistence 
+```sql
+INSERT INTO Interns (InternID, FirstName, LastName, Email)
+VALUES 
+    (1, 'John', 'Doe', 'jdoe@decodelabs.com'),
+    (2, 'Jane', 'Smith', 'jsmith@decodelabs.com'),
+    (3, 'Conan', 'O''Leary', 'coleary@decodelabs.com');
+
+SELECT * FROM Interns;
+```
+#### OUTPUT:-
+```text
++----------+-----------+----------+------------------------+
+| InternID | FirstName | LastName | Email                  |
++----------+-----------+----------+------------------------+
+|        1 | John      | Doe      | jdoe@decodelabs.com    |
+|        2 | Jane      | Smith    | jsmith@decodelabs.com  |
+|        3 | Conan     | O'Leary  | coleary@decodelabs.com |
++----------+-----------+----------+------------------------+
+3 rows in set (0.221 sec)
+```
