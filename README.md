@@ -3,6 +3,9 @@ An e‑commerce company was struggling with Excel spreadsheets to manage custome
 
 My mission: Set up a managed database on AWS, create a structured table for employee records, insert test data, and verify everything worked.
 
+## 📐 Infrastructure Specifications
+Cloud Service Provider: AWS RDS
+Operating System Platform: Aamazon Linux
 ---
 
 ## 🧠 What I Built (The Simple Version)
