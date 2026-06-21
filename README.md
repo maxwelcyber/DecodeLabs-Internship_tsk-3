@@ -6,6 +6,7 @@ My mission: Set up a managed database on AWS, create a structured table for empl
 ## 📐 Infrastructure Specifications
 Cloud Service Provider: AWS RDS
 Operating System Platform: Aamazon Linux
+
 ---
 
 ## 🧠 What I Built (The Simple Version)
