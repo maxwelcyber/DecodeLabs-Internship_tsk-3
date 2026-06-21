@@ -45,9 +45,7 @@ I built a secure cloud database that can replace an Excel spreadsheet. Instead o
 ```text
 ┌────────────────────────────────────────────────────────────────────────────────┐
 | Service	        | Purpose
-```
---
-```
+──────────────────────────────────────────────────────────────────────────────────
 | AWS RDS	        | Managed MySQL database (stores the actual data)
 | AWS EC2	        | Bastion Host (secure bridge between internet and database)
 | Security Groups |	Firewalls that control who can talk to what
