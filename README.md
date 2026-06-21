@@ -68,7 +68,6 @@ Task: Provision a database and a secure way to access it.
 
 ### Lesson learned: Always double-check Security Group inbound rules. The source should be the EC2 Security Group ID, not your IP address.
 
----
 
 ### 📋 Step 2: Connecting Through the SSH Tunnel
 * Why this was necessary:
