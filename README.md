@@ -80,8 +80,8 @@ ssh -i Documents/awsuser_key.pem -L 3306:decodelabs.cyvge68k46wi.us-east-1.rds.a
 ```
 
 * ssh -i Documents/awsuser_key.pem: Connect to EC2 using my private key file
-* -L 3306:rds-endpoint:3306	Port forwarding: Anything sent to my laptop's port 3306 gets forwarded to RDS's port 3306 through EC2
-* ec2-user@18.213.3.38	The EC2 instance's public IP address
+* -L 3306:rds-endpoint:3306__Port forwarding: Anything sent to my laptop's port 3306 gets forwarded to RDS's port 3306 through EC2
+* ec2-user@18.213.3.38: The EC2 instance's public IP address
 * "-N"	No remote commands – just forward the connection and stay open (this is why the terminal hangs/looks blank – it's working)
 
 Without the -N flag, SSH would give me a shell on EC2.
