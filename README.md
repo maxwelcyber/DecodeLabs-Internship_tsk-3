@@ -56,6 +56,7 @@ I built a secure cloud database that can replace an Excel spreadsheet. Instead o
 ---
 
 # 📋 Step-by-Step: What I Actually Did
+
 ### Step 1: Set Up the Cloud Infrastructure (AWS)
 Task: Provision a database and a secure way to access it.
 
@@ -85,6 +86,19 @@ ssh -i Documents/awsuser_key.pem -L 3306:decodelabs.cyvge68k46wi.us-east-1.rds.a
 
 Without the -N flag, SSH would give me a shell on EC2.
 
-### The Struggle: I tried installing MySQL directly on EC2 and it failed spectacularly. Amazon Linux uses 'yum' but the package names were different.
+#### The Struggle: I tried installing MySQL directly on EC2 and it failed spectacularly. Amazon Linux uses 'yum' but the package names were different.
 
----
+#### Lesson learned: I didn't need MySQL on EC2 at all, EC2 is just a bridge. All the SQL work was be done from my local machine through the tunnel. The tunnel just forwards everything.
+
+
+### Step 3: Connect with Local SQL Client
+Once the tunnel was running, I connected from my Kali laptop.
+
+
+```bash
+mysql -h 127.0.0.1 -u admin -p
+```
+* Why 127.0.0.1? The tunnel forwards to localhost. So when I connect to 127.0.0.1:3306, it goes through the tunnel to RDS.
+
+
+## 
