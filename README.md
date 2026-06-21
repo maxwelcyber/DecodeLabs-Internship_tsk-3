@@ -59,11 +59,11 @@ I built a secure cloud database that can replace an Excel spreadsheet. Instead o
 ### Step 1: Set Up the Cloud Infrastructure (AWS)
 Task: Provision a database and a secure way to access it.
 
-Created RDS instance with MySQL	Managed database – AWS handles backups and patching
-Placed RDS in a private subnet	No direct internet access → more secure
-Created EC2 instance as Bastion Host	Public entry point that can reach the private database
-Configured Security Groups	Firewall rules: only EC2 can talk to RDS on port 3306
-The Struggle: I initially didn't configure the Security Group correctly. My EC2 couldn't talk to RDS. I spent time troubleshooting and eventually rebuilt both instances with the correct network rules.
+* Created RDS instance with MySQL	Managed database – AWS handles backups and patching
+* Placed RDS in a private subnet – No direct internet access
+* Created EC2 instance as Bastion Host – A public entry point that can reach the private database
+* Configured Security Groups	Firewall rules: only EC2 can talk to RDS on port 3306
+* The Struggle: I initially didn't configure the Security Group correctly. My EC2 couldn't talk to RDS. I spent time troubleshooting and eventually rebuilt both instances with the correct network rules.
 
-Lesson learned: Always double-check Security Group inbound rules. The source should be the EC2 Security Group ID, not your IP address.
+** Lesson learned: Always double-check Security Group inbound rules. The source should be the EC2 Security Group ID, not your IP address.
 
