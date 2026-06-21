@@ -40,3 +40,18 @@ I built a secure cloud database that can replace an Excel spreadsheet. Instead o
 └─────────────────────────────────────────────────────────┘
 ```
 ---
+
+# 🛠️ Tools & Services Used
+'''text
+┌────────────────────────────────────────────────────────────────────────────────┐
+| Service	        | Purpose
+| AWS RDS	        | Managed MySQL database (stores the actual data)
+| AWS EC2	        | Bastion Host (secure bridge between internet and database)
+| Security Groups |	Firewalls that control who can talk to what
+| SSH Tunnel	    | Encrypted connection from my Kali laptop through EC2 to RDS
+| MySQL Client	  | Command-line tool to run SQL commands
+| DBeaver	        | GUI client for visual database management
+| SQL	            | Language used to create tables and manage data
+└─────────────────────────────────────────────────────────────────────────────────┘
+'''
+---
