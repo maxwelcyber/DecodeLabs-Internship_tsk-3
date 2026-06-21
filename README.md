@@ -65,5 +65,15 @@ Task: Provision a database and a secure way to access it.
 * Configured Security Groups	Firewall rules: only EC2 can talk to RDS on port 3306
 * The Struggle: I initially didn't configure the Security Group correctly. My EC2 couldn't talk to RDS. I spent time troubleshooting and eventually rebuilt both instances with the correct network rules.
 
-** Lesson learned: Always double-check Security Group inbound rules. The source should be the EC2 Security Group ID, not your IP address.
+### Lesson learned: Always double-check Security Group inbound rules. The source should be the EC2 Security Group ID, not your IP address.
 
+---
+
+### 📋 Step 2: Connecting Through the SSH Tunnel
+* Why this was necessary:
+RDS was in a private subnet, so I couldn't connect directly from my laptop. I had to go [ Laptop → EC2 → RDS. ]
+
+The command:
+```bash
+ssh -i Documents/awsuser_key.pem -L 3306:decodelabs.cyvge68k46wi.us-east-1.rds.amazonaws.com:3306 ec2-user@18.213.3.38 -N
+```
