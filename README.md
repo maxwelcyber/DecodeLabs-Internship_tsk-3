@@ -42,7 +42,7 @@ I built a secure cloud database that can replace an Excel spreadsheet. Instead o
 ---
 
 # 🛠️ Tools & Services Used
-'''text
+```text
 ┌────────────────────────────────────────────────────────────────────────────────┐
 | Service	        | Purpose
 | AWS RDS	        | Managed MySQL database (stores the actual data)
@@ -53,5 +53,5 @@ I built a secure cloud database that can replace an Excel spreadsheet. Instead o
 | DBeaver	        | GUI client for visual database management
 | SQL	            | Language used to create tables and manage data
 └─────────────────────────────────────────────────────────────────────────────────┘
-'''
+```
 ---
