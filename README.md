@@ -91,7 +91,7 @@ Without the -N flag, SSH would give me a shell on EC2.
 #### Lesson learned: I didn't need MySQL on EC2 at all, EC2 is just a bridge. All the SQL work was be done from my local machine through the tunnel. The tunnel just forwards everything.
 
 
-### Step 3: Connect with Local SQL Client
+### 📋 Step 3: Connect with Local SQL Client
 Once the tunnel was running, I connected from my Kali laptop.
 
 
@@ -101,4 +101,25 @@ mysql -h 127.0.0.1 -u admin -p
 * Why 127.0.0.1? The tunnel forwards to localhost. So when I connect to 127.0.0.1:3306, it goes through the tunnel to RDS.
 
 
-## 
+### 📋 Step 4: Write SQL to Create the Table
+Now the fun part – which was actually building the database structure.
+
+```text
+CREATE DATABASE decodelabs;
+USE decodelabs;
+
+CREATE TABLE Interns (
+    InternID INT PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL
+);
+```
+#### 🧠 What each constraint does:
+
+* PRIMARY KEY - Each InternID must be unique – no duplicates
+* UNIQUE (on Email) - No two interns can have the same email address
+* NOT NULL - You can't leave FirstName, LastName, or Email blank
+
+#### Why this matters: In Excel, you can type anything (or nothing). In a database, these rules enforce data quality at the system level. The database won't accept bad data.
+
