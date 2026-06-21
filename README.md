@@ -19,6 +19,7 @@ I built a secure cloud database that can replace an Excel spreadsheet. Instead o
 ---
 
 # 🏗️ Architecture Diagram (Visual Thinkers)
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
 │   [Your Laptop/Kali PC]                                 │
@@ -37,5 +38,5 @@ I built a secure cloud database that can replace an Excel spreadsheet. Instead o
 │   [Interns Table]  ← Created with SQL                   │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
-
+```
 ---
