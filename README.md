@@ -22,9 +22,9 @@ I built a secure cloud database that can replace an Excel spreadsheet. Instead o
 ```text
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
-│   [Your Laptop/Kali PC]                                 │
+│   [My Kali PC]                                          │
 │         │                                               │
-│         │ 1. SSH into EC2 (Public IP)                   │
+│         │ 1. SSH into EC2 (18.213.3.38)                 │
 │         │ 2. Tunnel forwards port 3306                  │
 │         ▼                                               │
 │   [EC2 Bastion Host]  ← Public Subnet                   │
