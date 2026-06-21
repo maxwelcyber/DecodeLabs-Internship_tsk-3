@@ -145,3 +145,18 @@ SELECT * FROM Interns;
 +----------+-----------+----------+------------------------+
 3 rows in set (0.221 sec)
 ```
+---
+
+# ##Final Thoughts
+This project forced me to understand:
+
+* How cloud networking works (VPC, subnets, security groups)
+
+* How to securely connect to private resources (Bastion Host + SSH tunnel)
+
+* How to design a database schema (DDL with constraints)
+
+* How to populate and verify data (DML with INSERT and SELECT)
+
+## The biggest lesson: Cloud architecture isn't about memorizing commands. It's about understanding the why behind each component. Why a private subnet? Why a Bastion Host? Why an SSH tunnel? Every decision has a security or scalability reason.
+
