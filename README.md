@@ -163,5 +163,5 @@ This project forced me to understand:
 
 * How to populate and verify data (DML with INSERT and SELECT)
 
-## The biggest lesson: Cloud architecture isn't about memorizing commands. It's about understanding the why behind each component. Why a private subnet? Why a Bastion Host? Why an SSH tunnel? Every decision has a security or scalability reason.
+#### The biggest lesson: Cloud architecture isn't about memorizing commands. It's about understanding the why behind each component. Why a private subnet? Why a Bastion Host? Why an SSH tunnel? Every decision has a security or scalability reason.
 
