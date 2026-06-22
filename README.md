@@ -66,8 +66,11 @@ I built a secure cloud database that can replace an Excel spreadsheet. Instead o
 Task: Provision a database and a secure way to access it.
 
 * Created RDS instance with MySQL	Managed database – AWS handles backups and patching
+
 * Placed RDS in a private subnet – No direct internet access
+
 * Created EC2 instance as Bastion Host – A public entry point that can reach the private database
+
 * Configured Security Groups	Firewall rules: only EC2 can talk to RDS on port 3306
 
 #### The Struggle: I initially didn't configure the Security Group correctly. My EC2 couldn't talk to RDS. I spent time troubleshooting and eventually rebuilt both instances with the correct network rules.
@@ -85,8 +88,11 @@ ssh -i Documents/awsuser_key.pem -L 3306:decodelabs.cyvge68k46wi.us-east-1.rds.a
 ```
 
 * ssh -i Documents/awsuser_key.pem: Connect to EC2 using my private key file
+
 * -L 3306:rds-endpoint:3306__Port forwarding: Anything sent to my laptop's port 3306 gets forwarded to RDS's port 3306 through EC2
+
 * ec2-user@18.213.3.38: The EC2 instance's public IP address
+
 * "-N"	No remote commands – just forward the connection and stay open (this is why the terminal hangs/looks blank – it's working)
 
 Without the -N flag, SSH would give me a shell on EC2.
@@ -123,7 +129,9 @@ CREATE TABLE Interns (
 #### 🧠 What each constraint does:
 
 * PRIMARY KEY - Each InternID must be unique – no duplicates
+
 * UNIQUE (on Email) - No two interns can have the same email address
+
 * NOT NULL - You can't leave FirstName, LastName, or Email blank
 
 #### Why this matters: In Excel, you can type anything (or nothing). In a database, these rules enforce data quality at the system level. The database won't accept bad data.
