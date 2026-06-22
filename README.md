@@ -152,7 +152,7 @@ SELECT * FROM Interns;
 ```
 ---
 
-# ##Final Thoughts
+# Final Thoughts?
 This project forced me to understand:
 
 * How cloud networking works (VPC, subnets, security groups)
