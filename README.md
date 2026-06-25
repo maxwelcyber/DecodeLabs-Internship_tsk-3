@@ -107,7 +107,7 @@ Once the tunnel was running, I connected from my Kali laptop.
 
 
 ```bash
-mysql -h 127.0.0.1 -u admin -p
+mysql -h 127.0.0.1 -u admin -p -P 3306
 ```
 * Why 127.0.0.1? The tunnel forwards to localhost. So when I connect to 127.0.0.1:3306, it goes through the tunnel to RDS.
 
